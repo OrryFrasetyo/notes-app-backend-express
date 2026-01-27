@@ -44,8 +44,8 @@ export const editNoteById = (req, res, next) => {
   const { id } = req.params;
   const { title, tags, body } = req.body;
   const updatedAt = new Date().toISOString();
-
   const idx = notes.findIndex((n) => n.id === id);
+
   if (idx === -1) {
     return next(new NotFoundError('Catatan tidak ditemukan'));
   }
