@@ -28,3 +28,5 @@ router.delete(
   validate(deleteAuthenticationPayloadSchema),
   logout,
 );
+
+export default router;
