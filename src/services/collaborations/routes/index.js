@@ -19,7 +19,7 @@ router.post(
   addCollaboration,
 );
 router.delete(
-  'collaborations',
+  '/collaborations',
   authenticateToken,
   validate(collaborationDeletePayloadSchema),
   deleteCollaboration,

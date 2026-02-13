@@ -100,12 +100,12 @@ class NoteRepositories {
       return ownerResult;
     }
 
-    const result = await this.collaborationRepositories.verifyCollaborator(
+    const isCollaborator = await this.collaborationRepositories.verifyCollaborator(
       noteId,
       userId,
     );
 
-    return result.rowCount > 0;
+    return isCollaborator;
   }
 }
 
